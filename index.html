@@ -9,26 +9,97 @@
 	<style>
 		body{
 			/* 상단 navbar 의  height만큼 padding 부여 - 스크롤시 겹치지 않음.*/
-			padding-top: 50px;
+			padding-top: 120px;
 		}
-
 		@media(max-width: 767px){
 			body{
+				padding-top: 0px;
 				padding-bottom: 50px;
 			}
+			.text-center-xs{
+				text-align: center;
+			}
+			.navar-static-top-xs{
+				position: static;
+			}
 		}
+
+		.navbar-nav {
+			float: left;
+			margin: 0;;
+		}
+		.navbar-nav > li {
+			float: left;
+		}
+		.navbar-nav > li > a {
+			padding: 15px 5px;
+		}		
+		.menu1{
+			padding-top: 5px;
+			padding-bottom: 5px;	  	
+		}
+		.bd-text-purple-bright{
+			color: #7952b3;
+		}
+		.btn-1{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
 	</style>
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">	
-	<a href="#" class="navbar-brand" title="Hyung">Hyung</a>
-</div>
+<div class="navbar navbar-inverse navbar-fixed-top navar-static-top-xs">
+	<div class="row">
+		<div class="col-sm-1 text-center">
+			<a href="#" class="btn btn-primary btn-lg" title="bootstrap">B</a>
+		</div>
+		<div class="col-sm-8">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Documentation</a></li>
+				<li><a href="#">Examples</a></li>
+				<li><a href="#">Themes</a></li>
+				<li><a href="#">Jobs</a></li>
+				<li><a href="#">Expo</a></li>
+				<li><a href="#">Blog</a></li>
+			</ul>
+		</div>
+		<div class="menu1 col-sm-3 hidden-xs text-center">
+			<a href="https://github.com/twbs/bootstrap" class="btn btn-primary" target="_blank" title="github"><img src="images/github.jpg" alt="github 이동"></a>				
+			<button class="btn btn-primary">다운로드 <i class="glyphicon glyphicon-download"></i></button>				
+		</div>
+	</div>
+</div>	
 <div class="container">
+	<div class="row">
+		<div class="col-xs-3 visible-xs-block"></div>
+		<div class="col-xs-6 col-sm-6 col-sm-push-6">
+			<img class="img-responsive" src="images/bootstrap-stack.png" alt="이미지">
+		</div>
+		<div class="col-xs-3 visible-xs-block"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-sm-6 col-sm-pull-6 text-center-xs" >
+			<h1 class="bd-text-purple-bright">Bootstrap</h1>
+			<p>Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p>
+			<p>Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+			<div class="row">
+				<div class="col-sm-6">
+					<button class="btn btn-default btn-lg btn-block btn-1">Get Started</button>
+				</div>
+				<div class="col-sm-6">
+					<button class="btn btn-default btn-lg btn-block btn-1">Download</button>
+				</div>
+			</div>		
+		</div>
+	</div>
+
 </div>
 <div class="bg-success" style="height:200px">
 </div>
-<div class="visible-xs-block navbar navbar-inverse navbar-fixed-bottom">
-	<a href="#" class="navbar-brand">Brand</a>
+<div class="menu1 visible-xs-block navbar navbar-inverse navbar-fixed-bottom">
+	<a href="https://github.com/twbs/bootstrap" class="btn btn-primary" target="_blank" title="github"><img src="images/github.jpg" alt="github 이동"></a>				
+	<button class="btn btn-primary">다운로드 <i class="glyphicon glyphicon-download"></i></button>				
 </div>
 
 <script src="js/jquery-3.3.1.js"></script>
