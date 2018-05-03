@@ -4,103 +4,53 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>index</title>
+	<title>v3.3.7</title>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<style>
 		body{
-			/* 상단 navbar 의  height만큼 padding 부여 - 스크롤시 겹치지 않음.*/
-			padding-top: 120px;
 			box-sizing: border-box;
 		}
 
 		@media(max-width: 767px){
-			body{
-				padding-top: 0px;
-				padding-bottom: 50px;
-			}
 			.text-center-xs{
 				text-align: center;
 			}
-			.navar-static-top-xs{
-				position: static;
-			}
 		}
 
-		.navbar-nav {
-			float: left;
-			margin: 0;;
-		}
-		.navbar-nav > li {
-			float: left;
-		}
-		.navbar-nav > li > a {
-			padding: 15px 5px;
-		}		
-		.menu1{
-			padding-top: 5px;
-			padding-bottom: 5px;	  	
-		}
 		.bd-text-purple-bright{
 			color: #7952b3;
 		}
-		.btn-1{
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-		.box-1{
-			padding: 5px;
-		}
-		.box-2{
-			height: 300px;
-			background-color: #F8F9FA;
-			border: 1px solid #cecece ;
-		}
-		.bs-bgcolor1{
-			background-color: #F7F7F7; 
-			padding-top: 25px;
-			padding-bottom: 15px;
-			
-		}		
 	</style>
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top navar-static-top-xs">
-	<div class="row">
-		<div class="col-sm-1 text-center">
-			<a href="#" class="btn btn-primary btn-lg" title="bootstrap">B</a>
-		</div>
-		<div class="col-sm-7">
-			<ul class="nav navbar-nav">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Documentation</a></li>
-				<li><a href="#">Examples</a></li>
-				<li><a href="#">Themes</a></li>
-				<li><a href="#">Jobs</a></li>
-				<li><a href="#">Expo</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
-		</div>
-		<div class="menu1 col-sm-4 hidden-xs text-center">
-			<div class="col-xs-5">
-				<div class="dropdown">
-					<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">버전 <span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Latest (4.1.x)</a></li>
-						<li><a href="#">v4.0.0</a></li>
-						<li class="divider"></li>
-						<li><a href="#">v4 Alpha6</a></li>
-						<li><a href="page337.html">v3.3.7</a></li>
-						<li><a href="#">v2.3.2</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-xs-7">
-				<a href="https://github.com/twbs/bootstrap" class="btn btn-primary" target="_blank" title="github"><img src="images/github.jpg" alt="github 이동"></a>				
-				<button class="btn btn-primary">다운로드 <i class="glyphicon glyphicon-download"></i></button>
-			</div>
-		</div>
+<div class="navbar navbar-inverse">
+	<div class="navbar-header">
+		<a href="index.html" class="navbar-brand">Bootstrap</a>
+		<button class="navbar-toggle" data-toggle="collapse" data-target="#topMenu">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
 	</div>
-</div>	
+	<div class="collapse navbar-collapse" id="topMenu">
+		<ul class="nav navbar-nav">
+			
+			<li><a href="#">Getting started</a></li>
+			<li><a href="#">CSS</a></li>
+			<li><a href="#">Components</a></li>
+			<li><a href="#">JavaScript</a></li>
+			<li><a href="#">Customize</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">Themes</a></li>
+			<li><a href="#">Jobs</a></li>
+			<li><a href="#">Expo</a></li>
+			<li><a href="#">Blog</a></li>
+		</ul>
+	</div>
+</div>
+
+
 <div class="container">
 	<div class="row">
 		<div class="col-xs-3 visible-xs-block"></div>
@@ -130,7 +80,7 @@
 		<div class="col-sm-4 box-1"><div class="box-2">DEFG</div></div>
 		<div class="col-sm-4 box-1"><div class="box-2">HIJKLM</div></div>
 	</div>
-	<div class="row bs-bgcolor1">
+	<div class="row">
 		<div class="text-center-xs">
 			<h5>Designed and built with all the love in the world by @mdo and @fat. Maintained by the core team with the help of our contributors.</h5>
 			<h5>Currently v4.1.1. Code licensed MIT, docs CC BY 3.0.</h5>
