@@ -9,6 +9,7 @@
 	<style>
 		body{
 			box-sizing: border-box;
+			position: relative;
 		}
 		.bs-boots4{
 			background-color: #0269C2;
@@ -106,8 +107,8 @@
 		}
 	</style>
 </head>
-<body>
-<div id="top" class="container-fluid bs-boots4">
+<body data-target="#rightMenuNavbar" data-spy="scroll" data-offset="80">
+<div class="container-fluid bs-boots4">
 	<a href="index.html">Bootstrap 4 is here!</a>
 </div>
 
@@ -143,13 +144,16 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="text-left-sm bs-fontsize3">Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</div>
+			<div class="col-sm-9 text-left-sm bs-fontsize3">
+				Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.
+			</div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 </div>
 <div class="container">
 	<div class="row">
-		<div class="col-xs-8">
+		<div class="col-sm-9">
 			<div class="row">
 				<div class="col-xs-12">
 					<p id="overview" class="subtitle1 subtitle1_1">Overview</p>
@@ -239,6 +243,17 @@
 					
 					<p class="subtitle2">Introduction</p>
 					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+					<ul>
+						<li>Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding.</li>
+						<li>Use rows to create horizontal groups of columns.</li>
+						<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+						<li>Predefined grid classes like .row and .col-xs-4 are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+						<li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows.</li>
+						<li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
+						<li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three .col-xs-4.</li>
+						<li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
+						<li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any .col-md-* class to an element will not only affect its styling on medium devices but also on large devices if a .col-lg-* class is not present.</li>
+					</ul>
 				</div>
 			</div>
 
@@ -250,44 +265,157 @@
 					
 					<p class="subtitle2">Introduction</p>
 					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+					<h4>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</h4>
+					
+					<p class="subtitle2">Basic example</p>
+					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+					<pre>
+Example
+
+<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>김구라</td>
+                <td>노량진</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>해골</td>
+                <td>행신동</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>원숭이</td>
+                <td>상도동</td>
+            </tr>
+        </tbody>
+    </table></pre>					
 				</div>
 			</div>						
 
 			<div class="row">
 				<div class="col-xs-12">
-					<p id="tables" class="subtitle1">Tables</p>
+					<p id="forms" class="subtitle1">Forms</p>
 					<hr>
 					<h4>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</h4>
 					
 					<p class="subtitle2">Introduction</p>
 					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
 				</div>
-			</div>			
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<p id="images" class="subtitle1">Images</p>
+					<hr>
+					<h4>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</h4>
+					
+					<p class="subtitle2">Carousel</p>	
+					<p>Example</p>			
+					<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+						<!-- Carousel 하단의 동그란 nav 요소  -->
+						<ol class="carousel-indicators">
+							<!-- data-target="Carousel 전체의 선택자" 
+							data-slide-to="컨텐츠 인덱스" -->
+							<li data-target="#myCarousel" data-slide-to="0"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="images/top01.jpg"/>
+								<div class="carousel-caption">
+									<h3>제목</h3>
+									<p>내용 어쩌구.. 저쩌구.. 뿡뿡..</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/top02.jpg"/>
+								<div class="carousel-caption">
+									<h3>제목</h3>
+									<p>내용 어쩌구.. 저쩌구.. 뿡뿡..</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="images/top03.jpg"/>
+								<div class="carousel-caption">
+									<h3>제목</h3>
+									<p>내용 어쩌구.. 저쩌구.. 뿡뿡..</p>
+								</div>
+							</div>
+						</div>
+						<!-- 이전, 다음 control UI -->
+						<a href="#myCarousel" class="left carousel-control" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">이전</span>
+						</a>
+						<a href="#myCarousel" class="right carousel-control" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">다음</span>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-xs-4 hidden-xs">
-			<div data-spy="affix"
-				data-offset-top="350"
-				data-offset-bottom="60">
-				<ul id="rightMenu" class="nav"> 
-					<li><a href="#overview">Overview</a></li>
-					<li><a href="#grid">Grid system</a></li>
-					<li><a href="#typography">Typography</a></li>
-					<li><a href="#code">Code</a></li>
-					<li><a href="#tables">Tables</a></li>
-					<li><a href="#">Forms</a></li>
-					<li><a href="#">Buttons</a></li>
-					<li><a href="#">Images</a></li>
-					<li><a href="#">Helper classes</a></li>
-					<li><a href="#">Responsive utilities</a></li>
-					<li><a href="#">Using Less</a></li>
-					<li><a href="#">Using Sass</a></li>
-					<li><a href="#top">Back to top</a></li>
-				</ul>	
+		<!-- 오른쪽 메뉴 -->
+		<div class="col-xs-3 hidden-xs">
+			<div class="row">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<div id="rightMenuNavbar" data-spy="affix"
+						data-offset-top="350"
+						data-offset-bottom="60">	
+						<ul id="rightMenu" class="nav nav-pills nav-stacked"> 
+							<li><a class="active" href="#overview">Overview</a></li>
+							<li><a href="#grid">Grid system</a></li>
+							<li><a href="#typography">Typography</a></li>
+							<li><a href="#code">Code</a></li>
+							<li><a href="#tables">Tables</a></li>
+							<li><a href="#forms">Forms</a></li>
+							<li><a href="#buttons">Buttons</a></li>
+							<li><a href="#images">Images</a></li>
+							<li><a href="#helper">Helper classes</a></li>
+							<li><a href="#ru">Responsive utilities</a></li>
+							<li><a href="#less">Using Less</a></li>
+							<li><a href="#sass">Using Sass</a></li>
+							<li><a href="#">Back to top</a></li>
+							<li>&nbsp;&nbsp;&nbsp;&nbsp;<button id="homeBtn" title="bootstrap 3.3.7 home 이동" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#myModal">Bootstrap</button>
+						</ul>	
+					</div>					
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
+<div class="container">
+	&nbsp;
+</div>
+<div class="modal fade" id="myModal">
+	<!-- modal-lg  | default(생략시) | modal-sm -->	
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span><span class="sr-only">모달 닫기</span></button>
+        <h4 class="modal-title">Home 이동</h4>
+      </div>
+      <div class="modal-body">
+        <p>Bootstrap 3.3.7 메인화면으로 이동합니다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="goBtn" type="button" class="btn btn-primary">go</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <div class="container-fluid bs-bgcolor3">
 	<div class="row">
 		<div class="text-center-xs">
@@ -298,5 +426,11 @@
 </div>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
+<script>
+	$("#goBtn").click(function(){
+		location.href="index.html";
+	});
+	$("#homeBtn").tooltip();
+</script>
 </body>
 </html>
