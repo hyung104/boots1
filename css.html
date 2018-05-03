@@ -31,6 +31,7 @@
 			background-color: #583F7E; 
 			padding-top: 25px;
 			padding-bottom: 15px;
+			margin-bottom: 60px;
 			color: #fff;
 		}
 		.bs-bgcolor3{
@@ -50,10 +51,14 @@
 			text-align: center;
 			display: inline-block;
 		}
-		.bs-fontsize{
-			font-size: 20px;
+		.bs-fontsize2{
+			font-size: 35px;
 			margin-top: 20px;
 			margin-bottom: 20px;
+		}
+		.bs-fontsize3{
+			font-size: 20px;
+			margin-bottom: 19px;
 		}
 		.btn-1{
 			margin-top: 10px;
@@ -69,18 +74,40 @@
 			background-color: #F8F9FA;
 			border: 1px solid #cecece ;
 		}
-		@media(min-width: 767px){
-			.bs-fontsize{
-				font-size: 25px;
+		.subtitle1{
+			font-size: 45px;
+			margin-top: 60px;
+		}
+		.subtitle1_1{
+			margin-top: 0px;
+		}
+		.subtitle2{
+			font-size: 30px;
+			margin-top: 25px;
+		}
+
+		@media(min-width: 768px){
+			.bs-fontsize2{
+				font-size: 60px;
+			}
+			.bs-fontsize3{
+				font-size: 22px;
+			}
+			.text-left-sm {
+				text-align: left;
 			}
 		}
 		.navbar{
 			margin-bottom: 0;
 		}
+		.affix{
+			/* 고정될때 상단에서 떨어질 거리 */
+			top: 30px;
+		}
 	</style>
 </head>
 <body>
-<div class="container-fluid bs-boots4">
+<div id="top" class="container-fluid bs-boots4">
 	<a href="index.html">Bootstrap 4 is here!</a>
 </div>
 
@@ -112,14 +139,153 @@
 <div class="container-fluid text-center bs-bgcolor2">
 	<div class="container">
 		<div class="row">
-			<div>
-				<span class="bs-booticon-lg">B</span>				
+			<div class="text-left-sm bs-fontsize2">CSS			
 			</div>
+		</div>
+		<div class="row">
+			<div class="text-left-sm bs-fontsize3">Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</div>
 		</div>
 	</div>
 </div>
 <div class="container">
+	<div class="row">
+		<div class="col-xs-8">
+			<div class="row">
+				<div class="col-xs-12">
+					<p id="overview" class="subtitle1 subtitle1_1">Overview</p>
+					<hr>
+					<h4>Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</h4>
+					
+					<p class="subtitle2">HTML5 doctype</p>
+					<p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+					<pre>
+<code>var <var>b</var> = <var>a</var> + 10;</code>
+<code>var <var>b</var> = <var>a</var> + 10;</code>
+<code>var <var>b</var> = <var>a</var> + 10;</code></pre>
 
+					<p class="subtitle2">Mobile first</p>
+					<p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, <b>Bootstrap is mobile first.</b> Mobile first styles can be found throughout the entire library instead of in separate files.</p>					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<p id="grid" class="subtitle1">Grid system</p>
+					<hr>
+					<h4>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</h4>
+					
+					<p class="subtitle2">Introduction</p>
+					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+					<ul>
+						<li>Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding.</li>
+						<li>Use rows to create horizontal groups of columns.</li>
+						<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+						<li>Predefined grid classes like .row and .col-xs-4 are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+						<li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows.</li>
+						<li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
+						<li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three .col-xs-4.</li>
+						<li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
+						<li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any .col-md-* class to an element will not only affect its styling on medium devices but also on large devices if a .col-lg-* class is not present.</li>
+					</ul>
+					<pre>
+&lt;div class="row"&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-8"&gt;.col-md-8&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+  &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+&lt;/div&gt;&lt;</pre>
+
+					<p class="subtitle2">Mobile first</p>
+					<p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, <b>Bootstrap is mobile first.</b> Mobile first styles can be found throughout the entire library instead of in separate files.</p>					
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<p id="typography" class="subtitle1">Typography</p>
+					<hr>
+					<h4>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</h4>
+
+					<p class="subtitle2">Introduction</p>
+					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<p id="code" class="subtitle1">Code</p>
+					<hr>
+					<h4>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</h4>
+					
+					<p class="subtitle2">Introduction</p>
+					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<p id="tables" class="subtitle1">Tables</p>
+					<hr>
+					<h4>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</h4>
+					
+					<p class="subtitle2">Introduction</p>
+					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+				</div>
+			</div>						
+
+			<div class="row">
+				<div class="col-xs-12">
+					<p id="tables" class="subtitle1">Tables</p>
+					<hr>
+					<h4>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</h4>
+					
+					<p class="subtitle2">Introduction</p>
+					<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+				</div>
+			</div>			
+		</div>
+		<div class="col-xs-4 hidden-xs">
+			<div data-spy="affix"
+				data-offset-top="350"
+				data-offset-bottom="60">
+				<ul id="rightMenu" class="nav"> 
+					<li><a href="#overview">Overview</a></li>
+					<li><a href="#grid">Grid system</a></li>
+					<li><a href="#typography">Typography</a></li>
+					<li><a href="#code">Code</a></li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#">Forms</a></li>
+					<li><a href="#">Buttons</a></li>
+					<li><a href="#">Images</a></li>
+					<li><a href="#">Helper classes</a></li>
+					<li><a href="#">Responsive utilities</a></li>
+					<li><a href="#">Using Less</a></li>
+					<li><a href="#">Using Sass</a></li>
+					<li><a href="#top">Back to top</a></li>
+				</ul>	
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="container-fluid bs-bgcolor3">
